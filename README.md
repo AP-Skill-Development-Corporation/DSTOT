@@ -5,25 +5,25 @@ please find the recording session [here](https://drive.google.com/drive/folders/
 # Day-1(22-02-2021)
 ===================
 - **Pointers**
-  - what is a pointer
-  - how to declare a pointer
-  - how to use a pointer
+  - What is a pointer
+  - How to declare a pointer
+  - How to use a pointer
 # Day-2(23-02-2021)
 ===================
 - **Pointers**
-  -declaring double pointer
-  -functions using pointer
-  - arrays using pointer
+  - Declaring double pointer
+  - Functions using pointer
+  - Arrays using pointer
 - **Structures**
-  -   what is a structure
-  -   how to create a structure
-  -   reading values into a structure
-  -   printing values of a structure
+  -   What is a structure
+  -   How to create a structure
+  -   Reading values into a structure
+  -   Printing values of a structure
   -   Declaring a Array of Structure
   -   Reading and printing values of Array of Structure
 # Day-3(24-02-2021)
 ===================
 - **Sructures**
-  - reading values into a structure using function
-  - printing values from a strucutre using function
-  - returning a structure from function
+  - Reading values into a structure using function
+  - Printing values from a strucutre using function
+  - Returning a structure from function
