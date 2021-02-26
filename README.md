@@ -34,3 +34,5 @@ Day-04[25-02-2021]:
 ===================
 	- Structure within a structure
 	- Structure within a structure and array by using functions[returning a structure]
+	- Structures by using pointers
+	- Structures by using pointer arrays
