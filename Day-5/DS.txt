@@ -1,0 +1,48 @@
+Data Structures:
+	this are going help to understand th storage of data and it's by sysytem
+2 types:
+1-linear data structure
+	->stack
+	->Queue
+	->linked list
+	->Arrays
+2-non-linear datastructure
+	->Graph
+	->Tree
+		-->Bfs
+		-->Dfs
+1.searching
+	-->linear search
+		-->comparing key value with one by  one element
+		-->order,unorder data
+		-->best case:
+			-->the key value found at starting pos
+		-->worst case:
+			-->the key value not found
+	-->Binary Search
+		--> Asscending order
+		--> find mid position
+		--> mid=(start+end)/2
+		--> key== ds[mid]
+				return mid
+		--> key<ds[mid]
+				left side of DS
+				end=mid
+		--> key>ds[mid]
+				right side of DS
+				start=mid
+		-->Best Case:
+			key found at mid position
+		--> worst Case:
+			key not found
+2.sorting
+	-->Buble sort
+	-->Inserstion sort
+	-->Quick sort
+	-->Raddix Sort
+	-->Merge Sort
+Hashing
+Expression Notations 
+	-->in order c=a+b
+	-->pre order 
+	-->post order
