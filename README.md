@@ -36,3 +36,11 @@ Day-04[25-02-2021]:
 	- Structure within a structure and array by using functions[returning a structure]
 	- Structures by using pointers
 	- Structures by using pointer arrays
+Day-05[26-02-2021]:
+===================
+	- Introduction to data structure
+	- implementation linear search in basic way
+	- implementation of linear search using function
+	- implementation of linear search using recursion
+	- implementation of linear search using pointers
+	- implementation of Binary Search using Recursion
