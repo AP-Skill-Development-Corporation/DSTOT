@@ -44,3 +44,11 @@ Day-05[26-02-2021]:
 	- implementation of linear search using recursion
 	- implementation of linear search using pointers
 	- implementation of Binary Search using Recursion
+Day-06[27-02-2021]:
+===================
+	- intro about sorting Techniques
+	- sorting techniques
+		- Buble sort
+		- insertion sort
+	- implementation of Buble sort
+	- implementation of insertion sort
