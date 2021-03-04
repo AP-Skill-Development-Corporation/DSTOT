@@ -52,3 +52,30 @@ Day-06[27-02-2021]:
 		- insertion sort
 	- implementation of Buble sort
 	- implementation of insertion sort
+Day-07[01-03-2021]:
+===================
+	- introduction to Non-linear Data Structures
+	- introduction Tree(theory)
+	- calculating time complexity of a Program
+	- minimalising the time complexity of the program
+Day-08[02-03-2021]:
+===================
+	- introduction to Stacks
+	- Thoery of stack
+		- what is a Stack
+		- what is top
+		- how to insert a element in stack
+		- how to delete element from stack
+	- implementation of stack using arrays
+Day-09[03-03-2021]:
+===================
+	- Introduction to Selection sort
+	- explanation of selection sort
+	- introduction to Queue
+		- what is Queue
+		- how to insert elements into a queue
+		- how to delete elements from queue
+Day-10[04-03-2021]:
+===================
+	- Implementation of Selection Sort
+	- Implementation Of Queue
