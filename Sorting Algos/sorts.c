@@ -5,6 +5,8 @@ void bubbleSortRecursive(int a[],int start,int actualSize,int swap);
 void selectionSort(int a[],int size);
 void selectionSortRecursive(int a[],int size,int index);
 void insertionSort(int a[],int size);
+void shellSort(int a[],int size);
+void shellSortRecursive(int a[],int size,int i);
 // All Sorting Techniques.
 
 int main(){
@@ -14,6 +16,8 @@ int main(){
 	bubbleSortRecursive(b,0,10,1);
 	int c[8] = {20,89,5,13,8,10,5,100};
 	insertionSort(c,8);
+	int d[9] = {90,80,70,60,50,40,30,20,10};
+	shellSortRecursive(d,9,9/2);
 	return 0;
 }
 
@@ -114,6 +118,44 @@ void insertionSort(int a[],int size){
 		printf("After %d Iteration\n",i+1);
 		printArray(a,size);
 	}
+}
+
+// Shell Sort (iterative)
+void shellSort(int a[],int size){
+	for(int i = size/2; i > 0; i = i/2){
+		for(int j = i ; j < size ; j++){
+			for(int k = j-i; k>=0; k = k-i){
+				if(a[k+i] >= a[k])
+					break;
+				else{
+					int temp = a[k+i];
+					a[k+i] = a[k];
+					a[k] = temp;
+				}
+			}
+		}
+		printf("After %d gap \n",i);
+		printArray(a,size);
+	}
+}
+
+// Shell Sort (recursive)
+void shellSortRecursive(int a[],int size,int i){
+	if(i<=0){return;}
+	for(int j = i ; j < size ; j++){
+			for(int k = j-i; k>=0; k = k-i){
+				if(a[k+i] >= a[k])
+					break;
+				else{
+					int temp = a[k+i];
+					a[k+i] = a[k];
+					a[k] = temp;
+				}
+			}
+		}
+		printf("After %d gap \n",i);
+		printArray(a,size);
+		shellSortRecursive(a,size,i/2);
 }
 
 //For Printing all the array elements
