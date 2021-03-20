@@ -7,7 +7,16 @@ void selectionSortRecursive(int a[],int size,int index);
 void insertionSort(int a[],int size);
 void shellSort(int a[],int size);
 void shellSortRecursive(int a[],int size,int i);
+//dividing the array!
+void sort(int low,int high); 
+// Merging back the elements to one single sorted array!
+void merge(int low,int mid,int high);
 // All Sorting Techniques.
+void QuickSort(int a[],int low,int high);
+int partition(int a[],int low,int high);
+// These arrays are for merge sort
+int m[5] = {12,8,7,33,-4};
+int ms[5];
 
 int main(){
 	int a[6] = {21,34,55,10,8,7}; 
@@ -18,7 +27,71 @@ int main(){
 	insertionSort(c,8);
 	int d[9] = {90,80,70,60,50,40,30,20,10};
 	shellSortRecursive(d,9,9/2);
+	sort(0,4);
+	for(int i=0; i<5; i++){
+		printf("%d ",m[i]);
+	}
+	
+	int f[10] = {20,22,14,15,66,32,10,9,7,65};
+	QuickSort(f,0,9);
 	return 0;
+}
+
+
+
+// To divide the array into two parts -until we reach a single element.
+void sort(int low,int high){
+	if(low<high){
+		int mid = (low+high)/2;
+		sort(low,mid);
+		sort(mid+1,high);
+		merge(low,mid,high);
+	}else{
+		return;
+	}
+}
+
+// To Merge Back the Array to form a sorted array
+void merge(int low,int mid,int high){
+	int l1,l2,i;
+	l1 = low;
+	l2 = mid+1;
+	//For sorting the down the elements and store 
+	// them in a bigger array
+	for(i=low; l1<=mid && l2<=high; i++){
+		if(m[l1]<=m[l2]){
+			ms[i] = m[l1];
+			l1++;
+		}else{
+			ms[i] = m[l2];
+			l2++;
+		}
+	}
+	// To copy the elements which ever are left in the 'left array'
+	while(l1<=mid){
+		ms[i] = m[l1];
+		l1++;
+		i++;
+	}
+	// To copy the elements which ever are left in the 'right array'
+	while(l2<=high){
+		ms[i] = m[l2];
+		l2++;
+		i++;
+	}
+	//to copy back the elements from array 'b' to array 'a'
+	for(i=low; i<=high;i++){
+		m[i] = ms[i];
+	}
+
+}
+
+//For Printing all the array elements
+void printArray(int a[],int size){
+	for(int i=0; i<size; i++){
+		printf("%d ",a[i]);
+	}
+	printf("\n");
 }
 
 //Bubble Sort Algorithm (Iterative)
@@ -114,7 +187,6 @@ void insertionSort(int a[],int size){
 			j--;
 		}
 		a[j] = key;
-		
 		printf("After %d Iteration\n",i+1);
 		printArray(a,size);
 	}
@@ -158,10 +230,37 @@ void shellSortRecursive(int a[],int size,int i){
 		shellSortRecursive(a,size,i/2);
 }
 
-//For Printing all the array elements
-void printArray(int a[],int size){
-	for(int i=0; i<size; i++){
-		printf("%d ",a[i]);
+// QuickSort
+void QuickSort(int a[],int low,int high){
+	if(low<high){
+		// Pivot is the index of the pivot element in the array
+		int pivot = partition(a,low,high);
+		QuickSort(a,low,pivot-1);
+		QuickSort(a,pivot+1,high);
 	}
-	printf("\n");
+}
+
+int partition(int a[],int low,int high){
+	int left = low,right = high,pivot_item = a[low];
+	while(left<right){
+		/*to move the left pointer to right until a[left]<=pivot_item*/
+		while(a[left]<=pivot_item){
+			left++;
+		}
+		/*to move the right pointer to left until a[right]>pivot_item*/
+		while(a[right]>pivot_item){
+			right--;
+		}
+		if(left<right){
+			int temp = a[left];
+			a[left] = a[right];
+			a[right] = temp;
+		}
+	}
+	
+	a[low] = a[right];
+	a[right] = pivot_item;
+	
+	printArray(a,10);
+	return right;
 }

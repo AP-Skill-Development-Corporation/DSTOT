@@ -107,8 +107,7 @@ int ULSR(int a[],int element,int index,int size){
 
 // Ordered (Sorted) Linear Search iterative approach
 
-int OLS(int a[],int element, int size)
-{
+int OLS(int a[],int element, int size){
 	for(int i=0; i<size; i++)
 	{
 		if(a[i] == element)
@@ -124,9 +123,7 @@ int OLS(int a[],int element, int size)
 	return -1;
 }
 
-
 // Ordered Linear Search (Recursive Approach)
-
 int OLSR(int a[],int element,int index,int size){
 	if(index >= size){
 		return -1;
@@ -146,7 +143,6 @@ int OLSR(int a[],int element,int index,int size){
 	
 	return -1;
 }
-
 
 //Binary Search Iterative Implementation
 int BSI(int a[],int element,int size){
@@ -207,10 +203,8 @@ int IPSI(int a[],int element,int size){
 	return -1;
 }
 
-
 // Interpolation Search (Recursive) 
 // pos = low + ((element-a[low])/(a[high]-a[low]))*(high-low)
-
 int IPSR(int a[],int element,int low,int high){
 	if(low>high)
 	{

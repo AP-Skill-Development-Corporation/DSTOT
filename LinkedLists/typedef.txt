@@ -1,0 +1,10 @@
+typedef is a keyword in C language to assign alternative names to the existing Datatypes. 
+
+Syntax of using typedef:
+
+typedef <existing_name> <alternative_name>;
+
+
+Ex: typedef int NUMBER;
+
+       NUMBER i,j;
