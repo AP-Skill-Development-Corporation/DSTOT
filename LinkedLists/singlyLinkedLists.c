@@ -9,19 +9,22 @@ typedef struct node{
 node* createNode(int d);
 void readAndPlace();
 void displayLL();
+void reverse();
 
 node* root = NULL;
 
 int main(){
 	while(1){
 		int choice;
-		printf("\nChoose an option\n1.Creating a New Node\n2.Displaying the Linked List\n3.Break\n");
+		printf("\nChoose an option\n1.Creating a New Node\n2.Displaying the Linked List\n3.Reverse\n4.Break");
 		scanf("%d",&choice);
 		if(choice == 1){
 			readAndPlace();
 		}else if(choice ==2){
 			displayLL();
 		}else if(choice ==3){
+			reverse();
+		}else if(choice == 4){
 			break;
 		}
 	}
@@ -37,7 +40,26 @@ node* createNode(int d){
 	return n;
 }
 
-
+// To Reverse the Linked List
+void reverse(){
+	node *h,*p,*c;
+	h = root;
+	p = h;
+	h = h->next;
+	c = h;
+	p->next = NULL;
+	
+	while(h!=NULL){
+		h = h->next;
+		c->next = p;
+		p = c;
+		c = h;
+	}
+	h = p;
+	root = h;
+	
+	displayLL();
+}
 // to create and place the node in the right position
 void readAndPlace(){
 	int data;
